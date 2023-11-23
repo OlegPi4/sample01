@@ -51,6 +51,8 @@ body._lock {
 
 /*стиль для фиксации горизонтального меню*/
 .header {
+  /* max-width: var(--widthcontent);  для ширины меню в content */
+   
    position: fixed;
    top: 0;
    left: 0;

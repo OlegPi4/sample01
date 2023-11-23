@@ -41,6 +41,23 @@ if (isMobile.any()) {
    document.body.classList.add('_pc')
 }
 
+// Установка левого отступа в случае если ширина меню равна ширине контента
+// function positionMenu() {
+// const widthWind = document.documentElement.clientWidth
+// const widthContant = 1200 // ширина контента 
+// let left = ((widthWind - widthContant) / 2);
+// if (left>0) { 
+//    const elem = document.querySelector('.header') // элемент в котором задается позиционирование 
+//    left = left + 'px'
+//    elem.style.cssText += `
+//       left: ${left};
+//    ` 
+//    }
+// }
+// positionMenu()
+// // Тоже самое в случае изменения ширины окна пользователем
+// window.addEventListener("resize", positionMenu)
+
 // Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
 if(menuLinks.length > 0) {
