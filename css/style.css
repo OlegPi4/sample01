@@ -13,11 +13,12 @@ body {
    color: var(--colorText);
    font-family: Arial, "Helvetica  Neue", Helvetica, sans-serif;
 }
+/*Блокировка body */
 body._lock {
    overflow: hidden;
 } 
 .page {
-   padding: 90px 0 30px 0; 
+   padding: var(--heightMenu) 0 30px 0; 
 
 }
 .page__section {
@@ -47,6 +48,8 @@ body._lock {
    background-color: #796;
 }
 
+
+/*стиль для фиксации горизонтального меню*/
 .header {
    position: fixed;
    top: 0;
@@ -74,19 +77,11 @@ body._lock {
    padding-left: 10px;
    padding-top: 3px;
 }
-.header__menu {
-}
-.menu {
-}
+
 .menu__icon {
    display: none;
 }
-.burger__line {
-}
-.menu__body {
-}
-.menu__list {
-}
+
 .menu__list > li {
    position: relative;
    margin: 0 0 0 20px;
@@ -172,8 +167,8 @@ body._touch .menu__list > li._active .menu__arrow {
       pointer-events: none;
       transition: all 0.2s ease 0s;
    /* 
-      opacity: 0;           -  скрываем меню            
-      visibility: hidden;   -  скрываем меню              
+      opacity: 0;           -  скрываем под-меню            
+      visibility: hidden;   -  скрываем под-меню              
       pointer-events: none; -  недоступно для взаимодействия с мышью
     */      
    }
@@ -196,6 +191,7 @@ body._touch .menu__list > li._active .menu__arrow {
       margin-bottom: 7px;
       background-color: var(--colorLink);
    }
+   /*Вертикальное меню*/
    .menu__body {
       position: fixed;
       top: 0;
@@ -208,6 +204,7 @@ body._touch .menu__list > li._active .menu__arrow {
       transition: left 0.3s ease 0s;
       overflow: auto;
    }
+   /*Появление вертикального меню*/
    .menu__body._active {
       left: 0;
    }
@@ -250,12 +247,13 @@ body._touch .menu__list > li._active .menu__arrow {
    .menu__list > li._active .menu__sub-list {
       display: block;
    }
-   .menu__list > li:hover .menu__sub-list {
+   body._pc .menu__list > li:hover .menu__sub-list {
       display: block;
-   }
+   } 
    .menu__link {
       font-size: 24px;
    }
+   /*вид подменю в вертикальном меню*/
    .menu__sub-list {
       position: relative;
       background-color: #789ce9;
