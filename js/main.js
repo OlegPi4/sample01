@@ -26,17 +26,17 @@ const isMobile = {
       )
    }
 };
+/*Присваиваем body дополнительный класс в зависимости от устройства*/
 if (isMobile.any()) {
    document.body.classList.add('_touch')
-
    let menuArrows = document.querySelectorAll('.menu__arrow')
+   /*На touch-screen на пунктах меню с выпадающим подменю на стрелки вешаем click */
    menuArrows.forEach(menuArrow => {
           menuArrow.addEventListener("click", toggleClass)
           function toggleClass(e) {
             menuArrow.parentElement.classList.toggle('_active')  
           }; 
    })            
-
 } else {
    document.body.classList.add('_pc')
 }
@@ -47,7 +47,7 @@ if (isMobile.any()) {
 // const widthContant = 1200 // ширина контента 
 // let left = ((widthWind - widthContant) / 2);
 // if (left>0) { 
-//    const elem = document.querySelector('.header') // элемент в котором задается позиционирование 
+//    const elem = document.querySelector('.header') // .header - блок с меню 
 //    left = left + 'px'
 //    elem.style.cssText += `
 //       left: ${left};
